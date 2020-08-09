@@ -49,7 +49,9 @@ public class MAIN {
                 case 3:
                     System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG THUC PHAM>>>>>>>>>>\n");
                     for(int i =0; i< KHOHANG.size();i++){
-                        if(KHOHANG.get(i).get)
+                        if(KHOHANG.get(i).getTenhang().equalsIgnoreCase("Keyword")){
+                            //-------------
+                        }
                     }
                     break;
                 case 4:

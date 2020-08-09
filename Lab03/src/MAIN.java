@@ -1,6 +1,6 @@
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import static java.util.Collections.*;
 
 public class MAIN {
 
@@ -74,20 +74,41 @@ public class MAIN {
                             minPrice = KHOHANG.get(i).gia;
                         }
                     }
-                    System.out.print("\nMat Hang co gia cao nhat : " );
+                    System.out.print("\nMặt Hàng Có Giá Cao Nhất : " );
                     KHOHANG.get(maxIndex).output();
-                    System.out.print("\nMat Hang co gia thap nhat : " );
+                    System.out.print("\nMặt Hàng Có Giá Thấp Nhất : " );
                     KHOHANG.get(minIndex).output();
                     break;
                 case 6:
-
+                    System.out.print("\n\tNhập Tên Sản Phẩm Cần Tìm : ");
+                    String keyWord = sc.nextLine();
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG TÌM DUOC>>>>>>>>>>\n");
+                    for(int i =0; i< KHOHANG.size();i++){
+                        if(KHOHANG.get(i).getTenhang().equalsIgnoreCase(keyWord)){
+                            KHOHANG.get(i).output();
+                        }
+                    }
                     break;
                 case 7:
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN DANH SACH DA SAP XEP (A -> Z) >>>>>>>>>>\n");
+                    Collections.sort(KHOHANG, new Comparator<HANGHOA>() {
+                        @Override
 
+                        public int compare(HANGHOA sv1, HANGHOA sv2) {
+                            return (sv1.getTenhang().compareTo(sv2.getTenhang()));
+                            // đảo danh sách đối thành
+                            //return (sv2.hoTen.compareTo(sv1.hoTen));
+                        }
+                    });
+                    for (int i=0; i < KHOHANG.size();i++){
+                        KHOHANG.get(i).output();
+                        System.out.println("\n------~------~-------~------~-------~------\n");
+                    }
                     break;
                 case 8:
                     System.out.printf("\t\t\tTHANK F0R USED,G00DBYE AND SEE Y0U AGAIN !!");
                     break;
+
             }
         }while (choose != 8);
     }

@@ -1,7 +1,4 @@
 import java.util.*;
-
-import static java.util.Collections.*;
-
 public class MAIN {
 
     public static void main(String[] args) {
@@ -11,15 +8,18 @@ public class MAIN {
         Scanner sc = new Scanner(System.in);
         //Declare
         int choose;
+        String keyWord;
+        int Count =0;
         ArrayList<HANGHOA> KHOHANG = new ArrayList<>();
         //Main
         do {
+            System.out.println("\n[!] Chương Trình Hiện Tại Có 7 Chức Năng : [1] [2] [3] [4] [5] [6] [7] Dùng [8] để THOÁT ");
             showMenu();
-            System.out.println("Chon 1 trong cac chuc nang( [1] [2] [3] [4] [5] [6] [7] ) dung [8] de THOAT");
+            System.err.print("\t\t\t[*]Chức Năng : ");
             choose = sc.nextInt();
             switch (choose) {
                 case 1:
-                    System.out.print("\n\t-Nhập số lượng mặt hàng cần thêm :");
+                    System.out.print("\n\t*Nhập số lượng mặt hàng cần thêm :");
                     int soLuongMh = sc.nextInt();
                     HANGHOA[] HANGHOA = new HANGHOA[soLuongMh];
                     System.out.println("\t\t\t\n<<<<<<<<<<NHẬP THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
@@ -32,22 +32,22 @@ public class MAIN {
                         else if (pickup == 2 ){
                             HANGHOA[i] = new HANGTHUCPHAM();
                         }else{
-                            System.err.println("Vui lòng chọn [1] hoặc [2]");
+                            System.err.println("(*) Vui lòng chọn [1] hoặc [2]");
                         }
                         HANGHOA[i].input();
                         KHOHANG.add(HANGHOA[i]);
                     }
                     break;
                 case 2:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
                     for(int i = 0; i < KHOHANG.size() ; i++) {
-                        System.out.println("Hàng Hóa Số "+ (i+1));
+                        System.out.println("[-]Hàng Hóa Số "+ (i+1));
                         KHOHANG.get(i).output();
                         System.out.println("------~------~-------~------~-------~------");
                     }
                     break;
                 case 3:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG THUC PHAM>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH SẢN PHẨM TRONG KHO HÀNG THỰC PHẨM>>>>>>>>>>\n");
                     for(int i =0; i< KHOHANG.size();i++){
                         if(KHOHANG.get(i).getTenhang().equalsIgnoreCase("Keyword")){
                             //-------------
@@ -55,11 +55,11 @@ public class MAIN {
                     }
                     break;
                 case 4:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG DIEN MAY>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH SẢN PHẨM TRONG KHO HÀNG ĐIỆN MÁY>>>>>>>>>>\n");
 
                     break;
                 case 5:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG CO GIA TIEN CAO NHAT VA THAP NHAT>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH HÀNG ĐẮT ĐỎ VÀ HÀNG RẺ BÈO>>>>>>>>>>\n");
                     int maxIndex = 0, minIndex =0;
                     double maxPrice = KHOHANG.get(0).gia , minPrice = KHOHANG.get(0).gia;
                     for(int i =1 ; i< KHOHANG.size(); i++){
@@ -74,23 +74,32 @@ public class MAIN {
                             minPrice = KHOHANG.get(i).gia;
                         }
                     }
-                    System.out.print("\nMặt Hàng Có Giá Cao Nhất : " );
+                    System.out.print("\n*Mặt Hàng Có Giá Cao Nhất : " );
                     KHOHANG.get(maxIndex).output();
-                    System.out.print("\nMặt Hàng Có Giá Thấp Nhất : " );
+                    System.out.print("\n*Mặt Hàng Có Giá Thấp Nhất : \n" );
                     KHOHANG.get(minIndex).output();
                     break;
                 case 6:
-                    System.out.print("\n\tNhập Tên Sản Phẩm Cần Tìm : ");
-                    String keyWord = sc.nextLine();
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN CÁC MẶT HÀNG TÌM DUOC>>>>>>>>>>\n");
-                    for(int i =0; i< KHOHANG.size();i++){
-                        if(KHOHANG.get(i).getTenhang().equalsIgnoreCase(keyWord)){
+
+                    System.out.print("\n\t[!] Nhập Tên Sản Phẩm Cần Tìm : ");
+                    sc.nextLine();
+                    keyWord = sc.nextLine();
+                    System.out.println("\n\t\t\t<<<<<<<<<<DANH SÁCH MẶT HÀNG TÌM ĐƯỢC TRONG KHO>>>>>>>>>>\n");
+                    for(int i =0; i< KHOHANG.size();i++) {
+                        if (KHOHANG.get(i).getTenhang().equalsIgnoreCase(keyWord)) {
                             KHOHANG.get(i).output();
+                            System.out.println("------~------~-------~------~-------~------");
+                            Count++;
                         }
                     }
+                    if(Count == 0 ){
+                            System.out.println("\n\t\t\t(*) Không có tên nào trùng khớp với tên bạn vừa nhập !\n");
+                    }
+
+
                     break;
                 case 7:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SACH THÔNG TIN DANH SACH DA SAP XEP (A -> Z) >>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH HÀNG HÓA ĐÃ ĐƯỢC SẮP XẾP (A -> Z) >>>>>>>>>>\n");
                     Collections.sort(KHOHANG, new Comparator<HANGHOA>() {
                         @Override
 
@@ -113,15 +122,16 @@ public class MAIN {
         }while (choose != 8);
     }
     static void showMenu() {
-        System.out.println("\n\n\n1.Nhap hang hoa can them vao kho: ");
-        System.out.println("2.Hien thi thong tin tat cac hang hoa trong kho: ");
-        System.out.println("3.Hien thi thong tin hang thuc pham");
-        System.out.println("4.Hien thi thong tin hang dien may");
-        System.out.println("5.Hien thi hang hoa co gia tien cao nhat va thap nhat : ");
-        System.out.println("6.Tim kiem hang hoa theo ten : ");
-        System.out.println("7.Sap xep ten theo A-Z:");
-        System.out.println("8.Thoat\n");
-
+        System.out.println("\t\t\t|-----------------------------------------------|");
+        System.out.println("\t\t\t|\t[1] - Thêm Hàng\t\t\t\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[2] - Kho Hàng Tổng \t\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[3] - Kho Hàng Thực Phẩm\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[4] - Kho Hàng Điện Máy\t\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[5] - Sản Phẩm Giá Cao Nhất và Thấp Nhất \t|");
+        System.out.println("\t\t\t|\t[6] - Tìm Kiếm \t\t\t\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[7] - Sắp Xếp ( A -> Z )\t\t\t\t\t|");
+        System.out.println("\t\t\t|\t[8] - THOÁT\t\t\t\t\t\t\t\t\t|");
+        System.out.println("\t\t\t|_______________________________________________|");
     }
 
 }

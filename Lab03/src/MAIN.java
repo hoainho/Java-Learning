@@ -10,6 +10,7 @@ public class MAIN {
         int choose;
         String keyWord;
         int Count =0;
+        HANGHOA HH =new HANGHOA();
         ArrayList<HANGHOA> KHOHANG = new ArrayList<>();
         //Main
         do {
@@ -19,9 +20,9 @@ public class MAIN {
             choose = sc.nextInt();
             switch (choose) {
                 case 1:
-                    System.out.print("\n\t*Nhập số lượng mặt hàng cần thêm :");
+                    System.out.print("\n\t[*] Nhập số lượng mặt hàng cần thêm :");
                     int soLuongMh = sc.nextInt();
-                    HANGHOA[] HANGHOA = new HANGHOA[soLuongMh];
+                      HANGHOA[] HANGHOA = new HANGHOA[soLuongMh];
                     System.out.println("\t\t\t\n<<<<<<<<<<NHẬP THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
                     for(int i = 0; i < soLuongMh ; i++) {
                         System.out.print("\n( [1]Hàng Điện Máy \t [2]Hàng Thực Phẩm ) Chọn loại hàng : ");
@@ -41,6 +42,7 @@ public class MAIN {
                 case 2:
                     System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
                     for(int i = 0; i < KHOHANG.size() ; i++) {
+
                         System.out.println("[-]Hàng Hóa Số "+ (i+1));
                         KHOHANG.get(i).output();
                         System.out.println("------~------~-------~------~-------~------");
@@ -96,7 +98,6 @@ public class MAIN {
                             System.out.println("\n\t\t\t(*) Không có tên nào trùng khớp với tên bạn vừa nhập !\n");
                     }
 
-
                     break;
                 case 7:
                     System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH HÀNG HÓA ĐÃ ĐƯỢC SẮP XẾP (A -> Z) >>>>>>>>>>\n");
@@ -117,6 +118,7 @@ public class MAIN {
                 case 8:
                     System.out.printf("\t\t\tTHANK F0R USED,G00DBYE AND SEE Y0U AGAIN !!");
                     break;
+
 
             }
         }while (choose != 8);

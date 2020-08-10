@@ -32,6 +32,22 @@ public class HANGHOA {
         System.out.print("\tNhập Giá Hàng Hóa : ");
         gia = sc.nextDouble();
     }
+    public void themMH(HANGHOA h){
+        int n,x;
+        n = sc.nextInt();
+        HANGHOA[] KHO = new HANGHOA[n+1];
+        for(int i =0; i< KHO.length-1 ; i++){
+            KHO[i].input();
+        }
+        x = sc.nextInt();
+
+        HANGHOA[] KHO1 = new HANGHOA[n+x];
+        for(int i =0; i< KHO1.length; i++){
+            KHO1[i].input();
+            KHO = KHO1;
+        }
+    }
+
     public void output(){
         System.out.println("\tTên Hàng :"+ tenhang+"\n\tGiá : " + gia);
     }

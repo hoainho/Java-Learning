@@ -1,6 +1,6 @@
 public class main {
     public static void main(String[] args) {
-        Persons PS = new Persons();
+        NhanVien PS = new NhanVien();
         PS.input();
         PS.output();
     }

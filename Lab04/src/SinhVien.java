@@ -41,17 +41,17 @@ public class SinhVien extends Persons {
     }
     public void input(){
         super.input();
-        System.out.println("Diem 1: ");
+        System.out.print("\t\t\tDiem 1: ");
         diem1 = sc.nextFloat();
-        System.out.println("Diem 2: ");
+        System.out.print("\t\t\tDiem 2: ");
         diem2 = sc.nextFloat();
-        System.out.println("Diem 3: ");
+        System.out.print("\t\t\tDiem 3: ");
         diem3 = sc.nextFloat();
     }
     public void output(){
         super.output();
-        System.out.println("Diem 1: " +diem1);
-        System.out.println("Diem 2 " +diem2);
-        System.out.println("Diem 3: " +diem3);
+        System.out.println("\t\t\tDiem 1: " +diem1);
+        System.out.println("\t\t\tDiem 2 " +diem2);
+        System.out.println("\t\t\tDiem 3: " +diem3);
     }
 }

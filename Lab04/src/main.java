@@ -9,14 +9,14 @@ public class main {
         int sl;
         do {
             showMenu();
-            System.out.print("Chon Chuc Nang : ");
+            System.out.print("Chọn Chức Năng : ");
             choose = sc.nextInt();
             switch (choose) {
                 case 1:
-                    System.out.println("Nhap sl sinh vien:");
+                    System.out.println("\t\t[*] Nhập Số Lượng Sinh Viên:");
                     sl = sc.nextInt();
                     SinhVien[] SINHVIEN = new SinhVien[sl];
-                    System.out.println("Nhap thong tin sinh vien");
+                    System.out.println("\t\t\t[-] Nhập Thông Tin Sinh Viên : ");
                     for (int i =0 ; i < sl; i++) {
                         SINHVIEN[i] = new SinhVien();
                         SINHVIEN[i].input();
@@ -25,10 +25,10 @@ public class main {
                     break;
                 case 2:
 
-                    System.out.println("Nhap sl nhan vien:");
+                    System.out.println("\t\t[*] Nhập Số Lượng Nhân Viên ");
                     sl = sc.nextInt();
                     NhanVien[] NHANVIEN = new NhanVien[sl];
-                    System.out.println("Nhap thong tin nhan vien");
+                    System.out.println("\t\t\t[-]Nhập Thôn Tin Nhân Viên : ");
                     for (int i =0 ; i < sl; i++) {
                         NHANVIEN[i] = new NhanVien();
                         NHANVIEN[i].input();
@@ -36,35 +36,35 @@ public class main {
                     }
                     break;
                 case 3:
-                    System.out.println("Thong tin hoc vien");
+                    System.out.println("\t\t[*] Thông Tin Học Viên");
                     for(int i =0; i< DanhSach.size();i++){
                         if(DanhSach.get(i) instanceof SinhVien){
-                            System.out.println("[-]SV Số "+ (i+1));
+                            System.out.println("\t\t\t[-]SV Số "+ (i+1));
                             DanhSach.get(i).output();
                         }
                     }
                     break;
                 case 4:
-                    System.out.println("Thong tin nhan vien");
+                    System.out.println("\t\t[*]Thông Tin Nhân Viên");
                     for(int i =0; i< DanhSach.size();i++){
                         if(DanhSach.get(i) instanceof NhanVien){
-                            System.out.println("[-]NV Số "+ (i+1));
+                            System.out.println("\t\t\t[-]NV Số "+ (i+1));
                             DanhSach.get(i).output();
                         }
                     }
                     break;
                 case 5:
-                    System.out.println("SEE Y0U AGAIN !!");
+                    System.out.println("\n\t\t\t\t\t\t\t[*] - SEE Y0U AGAIN - [*]");
                     break;
             }
         } while (choose != 5);
     }
     static void showMenu(){
-        System.out.println("[1] - Nhap 1 hoc vien");
-        System.out.println("[2] - Nhap 1 nhan vien");
-        System.out.println("[3] - xuat thong tin danh sach hoc vien");
-        System.out.println("[4] - Xuat thong tin danh sach nhan vien");
-        System.out.println("[5] - THOAT");
+        System.out.println("[1] - Nhập 1 Học Viên");
+        System.out.println("[2] - Nhập 1 Nhân Viên");
+        System.out.println("[3] - Xuất Thông Tin Danh Sách Học Viên");
+        System.out.println("[4] - Xuất Thông Tin Danh Sách Nhân Viên");
+        System.out.println("[5] - THOÁT");
 
     }
 }

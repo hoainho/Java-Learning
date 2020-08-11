@@ -40,25 +40,30 @@ public class MAIN {
                     }
                     break;
                 case 2:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH THÔNG TIN CÁC MẶT HÀNG MỚI>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH THÔNG TIN HÀNG ĐIỆN MÁY>>>>>>>>>>>\n");
                     for(int i = 0; i < KHOHANG.size() ; i++) {
-
-                        System.out.println("[-]Hàng Hóa Số "+ (i+1));
-                        KHOHANG.get(i).output();
+                            System.out.println("[-]Hàng Hóa Số "+ (i+1));
+                            KHOHANG.get(i).output();
                         System.out.println("------~------~-------~------~-------~------");
                     }
                     break;
                 case 3:
-                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH SẢN PHẨM TRONG KHO HÀNG THỰC PHẨM>>>>>>>>>>\n");
+                    System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH SẢN PHẨM HÀNG THỰC PHẨM>>>>>>>>>>\n");
                     for(int i =0; i< KHOHANG.size();i++){
-                        if(KHOHANG.get(i).getTenhang().equalsIgnoreCase("Keyword")){
-                            //-------------
+                            if(KHOHANG.get(i) instanceof HANGTHUCPHAM){
+                                System.out.println("[-]Hàng Hóa Số "+ (i+1));
+                                KHOHANG.get(i).output();
+                            }
                         }
-                    }
                     break;
                 case 4:
                     System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH SẢN PHẨM TRONG KHO HÀNG ĐIỆN MÁY>>>>>>>>>>\n");
-
+                    for(int i =0; i< KHOHANG.size();i++){
+                        if(KHOHANG.get(i) instanceof HANGDIENMAY){
+                            System.out.println("[-]Hàng Hóa Số "+ (i+1));
+                            KHOHANG.get(i).output();
+                        }
+                    }
                     break;
                 case 5:
                     System.out.println("\t\t\t\n<<<<<<<<<<DANH SÁCH HÀNG ĐẮT ĐỎ VÀ HÀNG RẺ BÈO>>>>>>>>>>\n");

@@ -8,8 +8,8 @@ public class main {
         int choose;
         int count = 0;
         int sl;
-        SinhVien[] dssv;
-        NhanVien[] dsnv;
+        SinhVien[] dssv = new SinhVien[0];
+        NhanVien[] dsnv = new NhanVien[0];
         do {
             showMenu();
             System.out.print("Chon Chuc Nang : ");
@@ -18,9 +18,10 @@ public class main {
                 case 1:
                     System.out.println("Nhap sl sinh vien:");
                     sl = sc.nextInt();
-                    dssv = new SinhVien[sl];
+
                     System.out.println("Nhap thong tin sinh vien");
                     for (int i =0 ; i < sl; i++) {
+                        dssv = new SinhVien[sl];
                         dssv[i].input();
                     }
                     break;
@@ -28,31 +29,23 @@ public class main {
 
                     System.out.println("Nhap sl nhan vien:");
                     sl = sc.nextInt();
-                    dsnv = new NhanVien[sl];
+
                     System.out.println("Nhap thong tin nhan vien");
                     for (int i =0 ; i < sl; i++) {
+                        dsnv = new NhanVien[sl];
                         dsnv[i].input();
                     }
                     break;
                 case 3:
-                    sl = sc.nextInt();
                     System.out.println("Thong tin hoc vien");
-                    for (int i =0 ; i < sl; i++) {
-                        dssv = new SinhVien[sl];
+                    for (int i =0 ; i < dssv.length; i++) {
                         dssv[i].output();
                     }
                     break;
                 case 4:
-
-                    System.out.println(" thong tin nhan vien");
-                    for (int i =0 ; i < State.size(); i++) {
-                        if(State.get(i) instanceof NhanVien){
-                            State.get(i).output();
-                            count ++;
-                        }else{
-                            System.out.println("Khong tim thay nhan vien nao");
-                        }
-
+                    System.out.println("Thong tin nhan vien");
+                    for (int i =0 ; i < dsnv.length; i++) {
+                        dsnv[i].output();
                     }
                     break;
                 case 5:

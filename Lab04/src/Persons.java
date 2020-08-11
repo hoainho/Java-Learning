@@ -30,6 +30,7 @@ public class Persons {
         this.namsinh = namsinh;
     }
     public void input() {
+        sc.nextLine();
         System.out.print("Nhap ho ten :");
         hoten = sc.nextLine();
         System.out.print("Nhap nam sinh :");

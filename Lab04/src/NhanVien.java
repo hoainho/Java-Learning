@@ -29,17 +29,17 @@ public class NhanVien extends  Persons{
     }
     public void input(){
         super.input();
+        pb.input();
         System.out.print("\nNhap Luong : ");
         luong = sc.nextDouble();
         sc.nextLine();
         System.out.print("\nNhap ngay nhan viec :");
         ngaynhanviec = sc.nextLine();
-        pb.input();
     }
     public void output(){
         super.output();
+        pb.output();
         System.out.println("Luong : " + luong);
         System.out.println("Ngay Nhan Viec : " + ngaynhanviec);
-        pb.output();
     }
 }

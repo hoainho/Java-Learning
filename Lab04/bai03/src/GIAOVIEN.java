@@ -20,11 +20,11 @@ public class GIAOVIEN extends NVCLC{
     }
     public void input(){
         super.input();
-        System.out.println("[-] Nhập Thù Lao Giáo DỤc  : ");
+        System.out.print("\t\t\t[-] Nhập Thù Lao Giáo DỤc  : ");
         ThuLao = sc.nextInt();
     }
     public void output(){
         super.output();
-        System.out.println("[+] Tổng Lương :" + (getLuong() + ThuLao));
+        System.out.println("\n\t[=>] Tổng Lương :" + (getLuong() + ThuLao));
     }
 }

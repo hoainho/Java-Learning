@@ -53,6 +53,6 @@ public class HOCVIEN extends CONNGUOI{
         System.out.println("\t\t\t[+] Điểm Toán: " +diem1);
         System.out.println("\t\t\t[+] Điểm Văn : " +diem2);
         System.out.println("\t\t\t[+] Điểm Anh Văn : " +diem3);
-        System.out.println("\t\t\t[+] Trung Bình Môn : " + ((diem1+diem2+diem3)/3));
+        System.out.println("\n\t[=>] Trung Bình Môn : " + ((diem1+diem2+diem3)/3));
     }
 }

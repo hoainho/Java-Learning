@@ -20,11 +20,11 @@ public class NVQL extends NVCLC {
     }
     public void input(){
         super.input();
-        System.out.print("Nhập Phụ Cấp Chức Vụ : ");
+        System.out.print("\t\t\t[-] Nhập Phụ Cấp Chức Vụ : ");
         PhuCap = sc.nextInt();
     }
     public void output(){
         super.output();
-        System.out.println("Tổng Lương Hàng Tháng :" + (getLuong() + PhuCap));
+        System.out.println("\n\t[=>] Tổng Lương Hàng Tháng :" + (getLuong() + PhuCap));
     }
 }

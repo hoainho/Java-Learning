@@ -44,7 +44,7 @@ public class NHANVIEN extends CONNGUOI{
         System.out.print("\t\t\t[-] Nhập Lương Cơ Bản : ");
         luong = sc.nextInt();
         sc.nextLine();
-        System.out.print("\t\t\t[-]Nhập Ngày Nhận Việc :");
+        System.out.print("\t\t\t[-] Nhập Ngày Nhận Việc :");
         NgayNhanViec = sc.nextLine();
     }
      public void output(){

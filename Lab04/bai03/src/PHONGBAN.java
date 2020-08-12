@@ -27,13 +27,13 @@ public class PHONGBAN {
         this.tenpb = tenpb;
     }
     public void input(){
-        System.out.print("\t\t\t-]Nhap Ma Phong Ban : ");
+        System.out.print("\t\t\t[-] Nhập Mã Phòng Ban : ");
         mapb = sc.nextLine();
-        System.out.print("\t\t\t[-]Nhap Ten Phong Ban : ");
+        System.out.print("\t\t\t[-] Nhập Tên Phòng Ban : ");
         tenpb = sc.nextLine();
     }
     public void output(){
-        System.out.println("\t\t\t[+] Ma Phong Ban :" + mapb);
-        System.out.println("\t\t\t[+] Ten Phong Ban :" + tenpb);
+        System.out.println("\t\t\t[+] Mã Phòng Ban :" + mapb);
+        System.out.println("\t\t\t[+] Tên Phòng Ban :" + tenpb);
     }
 }

@@ -28,8 +28,15 @@ abstract public class NHANVIEN {
         this.chuyenmon = chuyenmon;
     }
 
-    public void setLuongcb(int luongcb) {
-        this.luongcb = luongcb;
+    public boolean setLuongcb(int luongcb) {
+        if(luongcb > 0 ){
+            this.luongcb = luongcb;
+            return true;
+        }
+        else {
+            System.err.println("[*] Nhập Sai, Vui lòng nhập lại  ( LƯU Ý : Lương là kiểu số và lớn hơn 0 ) !");
+            return false;
+        }
     }
 
     public void setManv(String manv) {
@@ -58,23 +65,31 @@ abstract public class NHANVIEN {
         luongcb =l;
     }
     public void input(){
-        System.out.print("\t\t\t[-] Nhap ma : ");
+        System.out.print("\t\t\t[-] Nhập Mã : ");
         manv = sc.nextLine();
-        System.out.print("\t\t\t[-] Nhap ten : ");
+        System.out.print("\t\t\t[-] Nhập Tên : ");
         tennv = sc.nextLine();
-        System.out.print("\t\t\t[-] Nhap trinh do : ");
+        System.out.print("\t\t\t[-] Nhập Trình Độ : ");
         trinhdo = sc.nextLine();
-        System.out.print("\t\t\t[-] Nhap chuyen mon : ");
+        System.out.print("\t\t\t[-] Nhập Chuyên Môn : ");
         chuyenmon = sc.nextLine();
-        System.out.print("\t\t\t[-] Nhap luong : ");
-        luongcb = sc.nextInt();
+        System.out.print("\t\t\t[-] Nhập Lương Cơ Bản : ");
+        while(true){
+            int luongInput = sc.nextInt();
+            boolean check = setLuongcb(luongInput);
+            if(check){
+                break;
+            }else{
+                System.out.print("\t\t\t\n\t\t\t[-] Nhập Lương Cơ Bản : ");
+            }
+        }
     }
     public void output(){
-        System.out.println("\t\t\t[+] Ma :" +manv);
-        System.out.println("\t\t\t[+] Ten :" +tennv);
-        System.out.println("\t\t\t[+] Trinh Do :" +trinhdo);
-        System.out.println("\t\t\t[+] Chuyen Mon :" +chuyenmon);
-        System.out.println("\t\t\t[+] Luong Co Ban :" +luongcb);
+        System.out.println("\t\t\t[+] Mã :" +manv);
+        System.out.println("\t\t\t[+] Tên :" +tennv);
+        System.out.println("\t\t\t[+] Trình Độo :" +trinhdo);
+        System.out.println("\t\t\t[+] Chuyên Môn :" +chuyenmon);
+        System.out.println("\t\t\t[+] Lương Cơ Bản :" +luongcb);
     }
     abstract public void tinhluong();
 }

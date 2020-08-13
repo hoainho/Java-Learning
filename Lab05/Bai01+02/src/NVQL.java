@@ -17,16 +17,19 @@ public class NVQL extends NHANVIEN{
         phucapchucvu = pc;
     }
     public void input(){
-        System.out.print("\t\t\t[-] Nhap Phu Cap Chuc Vu :");
+        super.input();
+        System.out.print("\t\t\t[-] Nhập Phụ Cấp Chức Vụ :");
         phucapchucvu = sc.nextInt();
     }
     public void output(){
         super.output();
+        System.out.print("\t\t\t[+] Phụ Cấp Chức Vụ :" + phucapchucvu);
         tinhluong();
     }
 
     @Override
     public void tinhluong() {
-        System.out.println("[=>] Luong Tong : "+(luongcb + phucapchucvu));
+
+        System.out.println("\n[=>] Lương Tổng : "+(luongcb + phucapchucvu));
     }
 }

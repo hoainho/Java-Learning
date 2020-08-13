@@ -18,17 +18,17 @@ public class NVNC extends NHANVIEN{
     }
     public void input(){
         super.input();
-        System.out.print("\t\t\t[-] Nhap Phu Cap Doc Hai :");
+        System.out.print("\t\t\t[-] Nhập Phụ Cấp Độc Hại :");
         phucapdochai = sc.nextInt();
     }
     @Override
     public void tinhluong() {
-        System.out.println("[=>] Luong Tong : " + (luongcb + phucapdochai));
+        System.out.println("[=>] Lương Tổng : " + (luongcb + phucapdochai));
     }
 
     public void output(){
         super.output();
-        System.out.println("\t\t\t[+]Phu Cap Doc Hai : " +phucapdochai);
+        System.out.println("\t\t\t[+] Phụ Cấp Độc Hại : " +phucapdochai);
         tinhluong();
     }
 

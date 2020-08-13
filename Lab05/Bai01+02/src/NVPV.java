@@ -11,6 +11,6 @@ public class NVPV extends NHANVIEN{
 
     @Override
     public void tinhluong() {
-        System.out.println("[=>]Luong Tong : " + luongcb);
+        System.out.println("[=>] Lương Tổng : " + luongcb);
     }
 }

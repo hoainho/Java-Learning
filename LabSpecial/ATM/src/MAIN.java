@@ -10,6 +10,5 @@ public class MAIN {
         Money m = new Money();
         Calculate render = new Calculate();
         render.inputMoney();
-
     }
 }

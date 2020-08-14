@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -16,13 +14,11 @@ public class SINHVIEN {
             choose = Integer.parseInt(sc.nextLine());
             switch (choose) {
                 case 1:
-                    int n;
                     System.out.printf("Nhap so sv can them : ");
-                    n = Integer.parseInt(sc.nextLine());
+                    int n = Integer.parseInt(sc.nextLine());
                     for(int i = 0 ; i < n ; i ++) {
                         HOCSINH sv = new HOCSINH();
                         sv.input();
-
                         StudentList.add(sv);
                     }
                     break;

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ATM/ATM.iml" filepath="$PROJECT_DIR$/ATM/ATM.iml" />
       <module fileurl="file://$PROJECT_DIR$/LabSpecial.iml" filepath="$PROJECT_DIR$/LabSpecial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QLHH/QLHH.iml" filepath="$PROJECT_DIR$/QLHH/QLHH.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HINHCN {
+public class HINHCN implements HINH{
     Scanner sc = new Scanner(System.in);
     private double dai,rong;
     public double getDai() {
@@ -27,15 +27,24 @@ public class HINHCN {
         this.dai = dai;
         this.rong = rong;
     }
+    @Override
     public void input(){
-        System.out.println("Nhap do dai : ");
+        System.out.print("\t\t\t[-] Nhập Độ Dài Hình Chữ Nhật : ");
         dai = sc.nextDouble();
-        System.out.println("Nhap do rong : ");
+        System.out.print("\t\t\t[-] Nhập Độ Rộng Hình Chữ Nhật : ");
         rong = sc.nextDouble();
     }
+    @Override
     public void output(){
-        System.out.println("\t\t\t[+] Canh dai : " + dai);
-        System.out.println("\t\t\t[+] Canh rong : " + rong);
+        System.out.println("\n\t\t[!] Diện Tích Hình Chữ Nhật");
+        System.out.println("\t\t\t[+] Cạnh Dài : " + dai);
+        System.out.println("\t\t\t[+] Cạnh Rộng : " + rong);
+        dientich();
+    }
+
+    @Override
+    public void dientich() {
+        System.out.println("\t\t[=>] Diện Tích Hình Chữ Nhật : " +(dai * rong)+ "\n");
     }
 }
 

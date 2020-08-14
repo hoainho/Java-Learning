@@ -12,16 +12,16 @@ class HOCSINH {
     }
 
     public boolean setEmail(String email) {
-        if(email != null && email.contains("@") && !email.contains(" ")){
-            this.email = email;
-            return true;
+            if(email != null && email.contains("@") && !email.contains(" ")){
+                this.email = email;
+                return true;
+            }
+            else
+            {
+                System.err.println("Nhap sai vui long nhap lai (Example:  remalw@gmail.com)");
+                return false;
+            }
         }
-        else
-        {
-            System.err.println("Nhap sai vui long nhap lai (Example:  remalw@gmail.com)");
-            return false;
-        }
-    }
 
     public float getAverageMark() {
         return averageMark;

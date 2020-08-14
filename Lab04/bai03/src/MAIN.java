@@ -34,7 +34,9 @@ public class MAIN {
                     DANHSACH.add(gv);
                     break;
                 case 4:
-                    System.out.println("\n[+] Thông Tin Học Viên :");
+                    System.err.println("\n\t\t\t|-----------------------------------------------|");
+                    System.err.println("\t\t\t|\t\t\t[!] Thông Tin Học Viên [!]\t\t\t|");
+                    System.err.println("\t\t\t|-----------------------------------------------|\n");
                     for (CONNGUOI value : DANHSACH) {
                         if(value instanceof  HOCVIEN ) {
                             value.output();
@@ -42,7 +44,9 @@ public class MAIN {
                     }
                     break;
                 case 5:
-                    System.out.println("\n[+] Thông tin Nhân Viên Quản Lí :");
+                    System.err.println("\n\t\t\t|-----------------------------------------------|");
+                    System.err.println("\t\t\t|\t\t[!] Thông tin Nhân Viên Quản Lí [!]\t\t|");
+                    System.err.println("\t\t\t|-----------------------------------------------|\n");
                     for (CONNGUOI value : DANHSACH) {
                         if(value instanceof  NVQL ) {
                             value.output();
@@ -50,7 +54,9 @@ public class MAIN {
                     }
                     break;
                 case 6:
-                    System.out.println("\n[+] Nhập Thông Tin Giáo Viên :");
+                    System.err.println("\n\t\t\t|-----------------------------------------------|");
+                    System.err.println("\t\t\t|\t\t\t[!] Thông Tin Giáo Viên [!]\t\t\t|");
+                    System.err.println("\t\t\t|-----------------------------------------------|\n");
                     for (CONNGUOI value : DANHSACH) {
                         if(value instanceof  GIAOVIEN ) {
                             value.output();
@@ -58,7 +64,9 @@ public class MAIN {
                     }
                     break;
                 case 7:
-                    System.out.println("\n\t\t\t\t\t[~] SEA Y0U AGAIN [~]");
+                    System.err.println("\n\t\t\t|-----------------------------------------------|");
+                    System.err.println("\t\t\t|\t\t[~] S-E-A  Y-0-U  A-G-A-I-N [~]\t\t\t|");
+                    System.err.println("\t\t\t|-----------------------------------------------|\n");
                     break;
             }
 

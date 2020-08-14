@@ -1,3 +1,4 @@
+package MyPackage;
 public class Calculate {
     public static double Volume(double l, double w, double h){
         return l*w*h;

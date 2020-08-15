@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ATM/ATM.iml" filepath="$PROJECT_DIR$/ATM/ATM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CHUYENDOICS/CHUYENDOICS.iml" filepath="$PROJECT_DIR$/CHUYENDOICS/CHUYENDOICS.iml" />
       <module fileurl="file://$PROJECT_DIR$/LabSpecial.iml" filepath="$PROJECT_DIR$/LabSpecial.iml" />
       <module fileurl="file://$PROJECT_DIR$/QLHH/QLHH.iml" filepath="$PROJECT_DIR$/QLHH/QLHH.iml" />
     </modules>

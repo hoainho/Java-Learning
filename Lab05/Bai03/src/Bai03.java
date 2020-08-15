@@ -16,7 +16,7 @@ public class Bai03 {
     private JButton thêmButton;
     private JButton xóaButton;
     private JButton thoátButton;
-    private JScrollBar scrollBar1;
+    private JTable ID;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here

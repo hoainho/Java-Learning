@@ -9,6 +9,6 @@ public class Circle {
         return 2*Math.PI*r;
     }
     public double Area(){
-        return Math.PI* r*r;
+        return Math.PI* r * r;
     }
 }

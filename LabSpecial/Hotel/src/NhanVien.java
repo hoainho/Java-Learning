@@ -1,40 +1,23 @@
-import java.util.Scanner;
-
-public class NhanVien implements Method {
-    String manv,tennv;
-    int tuoi;
-    Scanner sc = new Scanner(System.in);
-    public String getTennv() {
-        return tennv;
-    }
-    public int getTuoi() {
-        return tuoi;
-    }
+public class NhanVien extends ConNguoi implements Method {
+    String manv;
     public String getManv() {
         return manv;
-    }
-    public void setTennv(String tennv) {
-        this.tennv = tennv;
     }
     public void setManv(String manv) {
         this.manv = manv;
     }
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
-    }
     public NhanVien(){
-        manv = tennv = null;
-        tuoi = 0;
+        super();
+        manv  = null;
     }
-    public NhanVien(String ma,String t,String cv, int tuoi){
+    public NhanVien(String t,int age,String ma){
+        super(t,age);
         manv = ma;
-        tennv = t;
-        this.tuoi = tuoi;
     }
     public NhanVien(NhanVien nv){
+        super.ten = nv.ten;
+        super.tuoi = nv.tuoi;
         manv = nv.manv;
-        tennv = nv.tennv;
-        tuoi = nv.tuoi;
     }
 
     @Override
@@ -42,7 +25,7 @@ public class NhanVien implements Method {
         System.out.print("\t\t\tNhập mã nhân viên :");
         manv = sc.nextLine();
         System.out.print("\t\t\tNhập tên nhân viên :");
-        tennv = sc.nextLine();
+        ten = sc.nextLine();
         System.out.print("\t\t\tNhập tuổi nhân viên :");
         tuoi = sc.nextInt();
     }
@@ -50,7 +33,7 @@ public class NhanVien implements Method {
     @Override
     public void output() {
         System.out.print("\t\t\tMã nhân viên :" +manv);
-        System.out.print("\t\t\tTên nhân viên :"+tennv);
+        System.out.print("\t\t\tTên nhân viên :"+ten);
         System.out.print("\t\t\tTuổi nhân viên :"+tuoi);
     }
 

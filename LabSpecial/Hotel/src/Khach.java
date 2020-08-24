@@ -1,9 +1,6 @@
-import java.util.Scanner;
-
 public class Khach extends ConNguoi implements Method{
     private int sdt;
     private String email;
-    Scanner sc = new Scanner(System.in);
     public Khach(){
        super();
        sdt = 0;

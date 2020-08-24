@@ -1,4 +1,4 @@
-public interface  Method {
+public interface  Method{
     void input();
     void output();
 }
